@@ -28,7 +28,11 @@ add_executable(CriptoManager main.cpp
     CifradorVigenere.h
     Usuario.h
     GestorUsuarios.h
-    GestorUsuarios.cpp)
+    GestorUsuarios.cpp
+    MenuAcceso.h
+    MenuAcceso.cpp
+    MenuPrincipal.h
+    MenuPrincipal.cpp)
 
 if(WIN32)
     # diálogo de archivos nativo de Windows (GetOpenFileNameA / GetSaveFileNameA)

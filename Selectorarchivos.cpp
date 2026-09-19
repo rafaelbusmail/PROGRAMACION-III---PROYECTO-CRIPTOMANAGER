@@ -58,5 +58,28 @@ string SelectorArchivos::seleccionarArchivoGuardar(const char* filtro, const cha
 }
 
 #else
+SelectorArchivos::SelectorArchivos() {
+    //constructor vacío, la clase no necesita atributos propios
+}
+
+SelectorArchivos::~SelectorArchivos() {
+    //destructor vacío
+}
+
+string SelectorArchivos::seleccionarArchivoAbrir(const char*) const {
+    //el parámetro filtro es específico del diálogo de Windows; aquí se ignora
+    cout << ">> Escriba la ruta del archivo a abrir (Enter para cancelar): ";
+    string ruta;
+    getline(cin, ruta);
+    return ruta;
+}
+
+string SelectorArchivos::seleccionarArchivoGuardar(const char*, const char*) const {
+    //los parámetros son específicos del diálogo de Windows; aquí se ignoran
+    cout << ">> Escriba la ruta donde guardar el archivo (Enter para cancelar): ";
+    string ruta;
+    getline(cin, ruta);
+    return ruta;
+}
 
 #endif

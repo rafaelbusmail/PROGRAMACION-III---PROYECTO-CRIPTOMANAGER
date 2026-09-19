@@ -1,3 +1,9 @@
+#ifdef _WIN32
+//windows.h debe ir ANTES de "Utilidades.h": este header usa "using namespace std;"
+//y windows.h define un typedef global "byte" que choca con std::byte de C++17
+#include <windows.h>
+#endif
+
 #include "Utilidades.h"
 #include <iostream>
 #include <limits>
@@ -6,6 +12,14 @@
 #include <iomanip>
 
 using namespace std;
+
+void configurarConsola() {
+#ifdef _WIN32
+    //en Windows se fuerza la consola a UTF-8 para que las tildes se vean bien;
+    //en Linux/macOS la consola ya maneja UTF-8 por defecto
+    SetConsoleOutputCP(65001);
+#endif
+}
 
 int validarEntero(string mensaje) {
     int n;

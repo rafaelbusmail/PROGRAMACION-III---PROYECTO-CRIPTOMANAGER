@@ -16,6 +16,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/GestorUsuarios.cpp" "CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.obj.d"
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/Hash.cpp" "CMakeFiles/CriptoManager.dir/Hash.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/Hash.cpp.obj.d"
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/HistorialOperaciones.cpp" "CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.obj.d"
+  "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/MenuAcceso.cpp" "CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj.d"
+  "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/MenuPrincipal.cpp" "CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj.d"
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/Selectorarchivos.cpp" "CMakeFiles/CriptoManager.dir/Selectorarchivos.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/Selectorarchivos.cpp.obj.d"
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/Utilidades.cpp" "CMakeFiles/CriptoManager.dir/Utilidades.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/Utilidades.cpp.obj.d"
   "C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/main.cpp" "CMakeFiles/CriptoManager.dir/main.cpp.obj" "gcc" "CMakeFiles/CriptoManager.dir/main.cpp.obj.d"

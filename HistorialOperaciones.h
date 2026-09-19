@@ -2,7 +2,7 @@
 #define HISTORIALOPERACIONES_H
 
 #include "RegistroOperacion.h"
-#include "ArregloDinamico.h"
+#include "Arreglodinamico.h"
 #include <string>
 using namespace std;
 

@@ -365,6 +365,54 @@ HistorialOperaciones.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.s
 .PHONY : HistorialOperaciones.cpp.s
 
+MenuAcceso.obj: MenuAcceso.cpp.obj
+.PHONY : MenuAcceso.obj
+
+# target to build an object file
+MenuAcceso.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj
+.PHONY : MenuAcceso.cpp.obj
+
+MenuAcceso.i: MenuAcceso.cpp.i
+.PHONY : MenuAcceso.i
+
+# target to preprocess a source file
+MenuAcceso.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.i
+.PHONY : MenuAcceso.cpp.i
+
+MenuAcceso.s: MenuAcceso.cpp.s
+.PHONY : MenuAcceso.s
+
+# target to generate assembly for a file
+MenuAcceso.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.s
+.PHONY : MenuAcceso.cpp.s
+
+MenuPrincipal.obj: MenuPrincipal.cpp.obj
+.PHONY : MenuPrincipal.obj
+
+# target to build an object file
+MenuPrincipal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj
+.PHONY : MenuPrincipal.cpp.obj
+
+MenuPrincipal.i: MenuPrincipal.cpp.i
+.PHONY : MenuPrincipal.i
+
+# target to preprocess a source file
+MenuPrincipal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.i
+.PHONY : MenuPrincipal.cpp.i
+
+MenuPrincipal.s: MenuPrincipal.cpp.s
+.PHONY : MenuPrincipal.s
+
+# target to generate assembly for a file
+MenuPrincipal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CriptoManager.dir\build.make CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.s
+.PHONY : MenuPrincipal.cpp.s
+
 Selectorarchivos.obj: Selectorarchivos.cpp.obj
 .PHONY : Selectorarchivos.obj
 
@@ -474,6 +522,12 @@ help:
 	@echo ... HistorialOperaciones.obj
 	@echo ... HistorialOperaciones.i
 	@echo ... HistorialOperaciones.s
+	@echo ... MenuAcceso.obj
+	@echo ... MenuAcceso.i
+	@echo ... MenuAcceso.s
+	@echo ... MenuPrincipal.obj
+	@echo ... MenuPrincipal.i
+	@echo ... MenuPrincipal.s
 	@echo ... Selectorarchivos.obj
 	@echo ... Selectorarchivos.i
 	@echo ... Selectorarchivos.s

@@ -4,6 +4,9 @@
 #include <string>
 using namespace std;
 
+//configura la consola para mostrar correctamente tildes y caracteres UTF-8
+void configurarConsola();
+
 int validarEntero(string mensaje);
 int validarEnteroRango(string mensaje, int minimo, int maximo);
 

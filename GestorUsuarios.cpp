@@ -12,12 +12,11 @@ GestorUsuarios::GestorUsuarios(int capacidadInicial)
     //al iniciar se carga lo que ya existía en archivo
     cargarUsuarios();
 
-    //si no hay ningún usuario todavía, se crea uno administrador por defecto
-    //para que siempre exista una forma de entrar al sistema la primera vez
+
     if (usuarios.getCantidad() == 0) {
-        registrar("admin", "admin123", "ADMIN");
+        registrar("admin", "admin123!", "ADMIN");
         cout << ">> No había usuarios registrados." << endl;
-        cout << ">> Se creó el usuario administrador por defecto: admin / admin123" << endl;
+        cout << ">> Se creó el usuario administrador por defecto: admin / admin123!" << endl;
     }
 }
 
@@ -34,9 +33,47 @@ int GestorUsuarios::buscarUsuario(const string& nombre) const {
     return -1;
 }
 
-bool GestorUsuarios::registrar(const string& nombre, const string& clave, const string& rol) {
+bool GestorUsuarios::claveValida(const string& clave) const {
+    if (clave.size() < 5) {
+        return false;
+    }
+
+    //se comparan caracteres ASCII a propósito
+    bool tieneLetra = false;
+    bool tieneNumero = false;
+    bool tieneEspecial = false;
+
+    for (size_t i = 0; i < clave.size(); i++) {
+        unsigned char c = static_cast<unsigned char>(clave[i]);
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+            tieneLetra = true;
+        } else if (c >= '0' && c <= '9') {
+            tieneNumero = true;
+        } else {
+            tieneEspecial = true;
+        }
+    }
+
+    return tieneLetra && tieneNumero && tieneEspecial;
+}
+
+ResultadoRegistro GestorUsuarios::registrar(const string& nombre, const string& clave, const string& rol) {
+    if (nombre.size() < 3) {
+        return ResultadoRegistro::NOMBRE_CORTO;
+    }
+
+    //el '|' es el delimitador del archivo usuarios.txt: si se guardara en el
+    //nombre, el archivo quedaría corrupto al volver a cargarlo
+    if (nombre.find(DELIMITADOR) != string::npos) {
+        return ResultadoRegistro::NOMBRE_INVALIDO;
+    }
+
+    if (!claveValida(clave)) {
+        return ResultadoRegistro::CLAVE_DEBIL;
+    }
+
     if (buscarUsuario(nombre) != -1) {
-        return false; //el nombre ya está ocupado
+        return ResultadoRegistro::NOMBRE_OCUPADO;
     }
 
     Usuario nuevo;
@@ -46,7 +83,7 @@ bool GestorUsuarios::registrar(const string& nombre, const string& clave, const 
 
     usuarios.agregar(nuevo);
     guardarUsuarios();
-    return true;
+    return ResultadoRegistro::OK;
 }
 
 bool GestorUsuarios::iniciarSesion(const string& nombre, const string& clave) {

@@ -9,3 +9,5 @@ release/GestorUsuarios.o
 release/Hash.o
 release/HistorialOperaciones.o
 release/Selectorarchivos.o
+release/MenuAcceso.o
+release/MenuPrincipal.o

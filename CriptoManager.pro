@@ -28,7 +28,9 @@ SOURCES += \
     GestorUsuarios.cpp \
     Hash.cpp \
     HistorialOperaciones.cpp \
-    Selectorarchivos.cpp
+    Selectorarchivos.cpp \
+    MenuAcceso.cpp \
+    MenuPrincipal.cpp
 
 HEADERS += \
     Utilidades.h \
@@ -43,7 +45,9 @@ HEADERS += \
     HistorialOperaciones.h \
     Selectorarchivos.h \
     Arreglodinamico.h \
-    Usuario.h
+    Usuario.h \
+    MenuAcceso.h \
+    MenuPrincipal.h
 
 win32 {
     # diálogo de archivos nativo de Windows (GetOpenFileNameA / GetSaveFileNameA)

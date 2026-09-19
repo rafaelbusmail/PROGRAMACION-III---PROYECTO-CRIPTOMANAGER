@@ -222,6 +222,34 @@ CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\GestorUsuarios.cpp" -o CMakeFiles\CriptoManager.dir\GestorUsuarios.cpp.s
 
+CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj: CMakeFiles/CriptoManager.dir/flags.make
+CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj: C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/MenuAcceso.cpp
+CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj: CMakeFiles/CriptoManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj -MF CMakeFiles\CriptoManager.dir\MenuAcceso.cpp.obj.d -o CMakeFiles\CriptoManager.dir\MenuAcceso.cpp.obj -c "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuAcceso.cpp"
+
+CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuAcceso.cpp" > CMakeFiles\CriptoManager.dir\MenuAcceso.cpp.i
+
+CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuAcceso.cpp" -o CMakeFiles\CriptoManager.dir\MenuAcceso.cpp.s
+
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj: CMakeFiles/CriptoManager.dir/flags.make
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj: C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/MenuPrincipal.cpp
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj: CMakeFiles/CriptoManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj -MF CMakeFiles\CriptoManager.dir\MenuPrincipal.cpp.obj.d -o CMakeFiles\CriptoManager.dir\MenuPrincipal.cpp.obj -c "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuPrincipal.cpp"
+
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuPrincipal.cpp" > CMakeFiles\CriptoManager.dir\MenuPrincipal.cpp.i
+
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\MenuPrincipal.cpp" -o CMakeFiles\CriptoManager.dir\MenuPrincipal.cpp.s
+
 # Object files for target CriptoManager
 CriptoManager_OBJECTS = \
 "CMakeFiles/CriptoManager.dir/main.cpp.obj" \
@@ -234,7 +262,9 @@ CriptoManager_OBJECTS = \
 "CMakeFiles/CriptoManager.dir/Hash.cpp.obj" \
 "CMakeFiles/CriptoManager.dir/ConversorBinario.cpp.obj" \
 "CMakeFiles/CriptoManager.dir/CifradorVigenere.cpp.obj" \
-"CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.obj"
+"CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.obj" \
+"CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj" \
+"CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj"
 
 # External object files for target CriptoManager
 CriptoManager_EXTERNAL_OBJECTS =
@@ -250,11 +280,13 @@ CriptoManager.exe: CMakeFiles/CriptoManager.dir/Hash.cpp.obj
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/ConversorBinario.cpp.obj
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/CifradorVigenere.cpp.obj
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/GestorUsuarios.cpp.obj
+CriptoManager.exe: CMakeFiles/CriptoManager.dir/MenuAcceso.cpp.obj
+CriptoManager.exe: CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/build.make
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/linkLibs.rsp
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/objects1.rsp
 CriptoManager.exe: CMakeFiles/CriptoManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable CriptoManager.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\rafae\OneDrive\Documentos\QT PROJECTS\CriptoManager\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable CriptoManager.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CriptoManager.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

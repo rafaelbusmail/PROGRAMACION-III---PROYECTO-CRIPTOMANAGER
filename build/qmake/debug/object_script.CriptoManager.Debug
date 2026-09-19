@@ -9,3 +9,5 @@ debug/GestorUsuarios.o
 debug/Hash.o
 debug/HistorialOperaciones.o
 debug/Selectorarchivos.o
+debug/MenuAcceso.o
+debug/MenuPrincipal.o
