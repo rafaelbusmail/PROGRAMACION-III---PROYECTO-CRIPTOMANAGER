@@ -1,10 +1,3 @@
-//En Windows se usa el diálogo nativo del explorador de archivos (Win32 API).
-//Este mismo .exe compilado para Windows funciona en Linux a través de Wine,
-//porque Wine implementa estas funciones.
-//
-//NOTA: windows.h debe incluirse ANTES que cualquier header que traiga
-//<cstddef>/std::byte (como <string>); si no, el typedef global "byte" de
-//rpcndr.h choca con std::byte de C++17 y la compilación falla.
 #ifdef _WIN32
 #include <windows.h>
 #include <commdlg.h>
@@ -65,26 +58,5 @@ string SelectorArchivos::seleccionarArchivoGuardar(const char* filtro, const cha
 }
 
 #else
-//En Linux/macOS (compilación nativa, sin Wine) no existe el diálogo Win32,
-//así que se pide la ruta por consola. El usuario puede escribir la ruta o
-//arrastrar el archivo a la terminal.
-SelectorArchivos::SelectorArchivos() {
-}
 
-SelectorArchivos::~SelectorArchivos() {
-}
-
-string SelectorArchivos::seleccionarArchivoAbrir(const char* filtro) const {
-    cout << ">> (modo consola) Escriba la ruta del archivo a abrir: ";
-    string ruta;
-    getline(cin, ruta);
-    return ruta;
-}
-
-string SelectorArchivos::seleccionarArchivoGuardar(const char* filtro, const char* extensionDefault) const {
-    cout << ">> (modo consola) Escriba la ruta donde guardar el archivo: ";
-    string ruta;
-    getline(cin, ruta);
-    return ruta;
-}
 #endif

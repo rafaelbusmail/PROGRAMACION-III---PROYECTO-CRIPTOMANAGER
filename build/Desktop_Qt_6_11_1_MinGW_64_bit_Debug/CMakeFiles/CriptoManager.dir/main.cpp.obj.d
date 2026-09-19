@@ -154,6 +154,10 @@ CMakeFiles/CriptoManager.dir/main.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/windows.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sdkddkver.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/excpt.h \
@@ -414,4 +418,4 @@ CMakeFiles/CriptoManager.dir/main.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdint.h \
- C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\SelectorArchivos.h
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Selectorarchivos.h

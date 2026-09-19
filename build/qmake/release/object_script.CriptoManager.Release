@@ -1,0 +1,11 @@
+release/main.o
+release/Utilidades.o
+release/CifradorCesar.o
+release/CifradorVigenere.o
+release/CifradorXOR.o
+release/ConversorBinario.o
+release/GestorArchivos.o
+release/GestorUsuarios.o
+release/Hash.o
+release/HistorialOperaciones.o
+release/Selectorarchivos.o

@@ -1,0 +1,11 @@
+debug/main.o
+debug/Utilidades.o
+debug/CifradorCesar.o
+debug/CifradorVigenere.o
+debug/CifradorXOR.o
+debug/ConversorBinario.o
+debug/GestorArchivos.o
+debug/GestorUsuarios.o
+debug/Hash.o
+debug/HistorialOperaciones.o
+debug/Selectorarchivos.o

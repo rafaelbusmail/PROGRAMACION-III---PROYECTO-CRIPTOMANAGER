@@ -445,8 +445,6 @@ void opcionXORArchivo(GestorArchivos& gestor, SelectorArchivos& selector, Conver
         }
 
         //se escribe bloque por bloque directamente al archivo de salida:
-        //así no se carga en memoria el archivo completo ni su versión binaria
-        //(que ocupa 8 veces más)
         ofstream salida(rutaSalida.c_str(), ios::trunc);
         if (!salida.is_open()) {
             cout << ">> ERROR: No se pudo crear el archivo de salida." << endl;
