@@ -36,6 +36,11 @@ char CifradorVigenere::desplazarCaracter(char c, int desplazamiento) const {
 }
 
 string CifradorVigenere::encriptar(const string& textoOriginal) const {
+    //defensa contra clave vacía: sin clave no hay cifrado posible
+    if (clave.empty()) {
+        return textoOriginal;
+    }
+
     string resultado = textoOriginal;
     size_t indiceClave = 0;
 
@@ -56,6 +61,11 @@ string CifradorVigenere::encriptar(const string& textoOriginal) const {
 }
 
 string CifradorVigenere::desencriptar(const string& textoCifrado) const {
+    //defensa contra clave vacía: sin clave no hay descifrado posible
+    if (clave.empty()) {
+        return textoCifrado;
+    }
+
     string resultado = textoCifrado;
     size_t indiceClave = 0;
 

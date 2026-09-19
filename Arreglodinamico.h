@@ -23,7 +23,9 @@ private:
 
 public:
     ArregloDinamico(int capacidadInicial = 5) {
-        capacidad = capacidadInicial;
+        //si alguien pide capacidad 0 se fuerza a 1 para que redimensionar()
+        //(capacidad *= 2) nunca se quede en 0 y escriba fuera de rango
+        capacidad = (capacidadInicial <= 0) ? 1 : capacidadInicial;
         cantidad = 0;
         datos = new T[capacidad];
     }

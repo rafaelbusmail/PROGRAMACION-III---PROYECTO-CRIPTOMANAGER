@@ -30,7 +30,17 @@ add_executable(CriptoManager main.cpp
     GestorUsuarios.h
     GestorUsuarios.cpp)
 
-target_link_libraries(CriptoManager comdlg32)
+if(WIN32)
+    # diálogo de archivos nativo de Windows (GetOpenFileNameA / GetSaveFileNameA)
+    target_link_libraries(CriptoManager comdlg32)
+
+    if(MINGW)
+        # enlazado estático del runtime de MinGW: el .exe queda autocontenido y
+        # corre en cualquier Windows (y en Linux vía Wine) sin DLLs adicionales
+        # (libgcc_s_seh-1.dll, libstdc++-6.dll, etc.)
+        target_link_options(CriptoManager PRIVATE -static -static-libgcc -static-libstdc++)
+    endif()
+endif()
 
 include(GNUInstallDirs)
 install(TARGETS CriptoManager

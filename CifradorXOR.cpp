@@ -20,6 +20,15 @@ char* CifradorXOR::procesarBloque(const char* datosEntrada, int longitud, long p
     //el bloque resultante se reserva aquí y el que llama debe hacer delete[]
     char* resultado = new char[longitud];
 
+    //defensa contra clave vacía: sin clave no hay transformación posible,
+    //así que se devuelve una copia sin modificar (evita división por cero)
+    if (clave.empty()) {
+        for (int i = 0; i < longitud; i++) {
+            resultado[i] = datosEntrada[i];
+        }
+        return resultado;
+    }
+
     for (int i = 0; i < longitud; i++) {
         char letraClave = clave[(posicionInicial + i) % clave.size()];
         resultado[i] = datosEntrada[i] ^ letraClave;

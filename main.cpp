@@ -3,7 +3,10 @@
 
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#ifdef _WIN32
 #include <windows.h>
+#endif
 #include "Utilidades.h"
 #include "GestorArchivos.h"
 #include "CifradorCesar.h"
@@ -12,7 +15,7 @@
 #include "ConversorBinario.h"
 #include "HistorialOperaciones.h"
 #include "GestorUsuarios.h"
-#include "SelectorArchivos.h"
+#include "Selectorarchivos.h"
 #include "Hash.h"
 
 using namespace std;
@@ -34,7 +37,11 @@ void opcionCalcularHash(GestorArchivos& gestor, SelectorArchivos& selector, Hash
 void opcionRegistrarUsuario(GestorUsuarios& usuarios);
 
 int main() {
+#ifdef _WIN32
+    //en Windows se fuerza la consola a UTF-8 para que las tildes se vean bien;
+    //en Linux/macOS la consola ya maneja UTF-8 por defecto
     SetConsoleOutputCP(65001);
+#endif
 
     CifradorCesar cesar;
     CifradorVigenere vigenere;
@@ -437,7 +444,17 @@ void opcionXORArchivo(GestorArchivos& gestor, SelectorArchivos& selector, Conver
             return;
         }
 
-        string resultadoCompleto = "";
+        //se escribe bloque por bloque directamente al archivo de salida:
+        //así no se carga en memoria el archivo completo ni su versión binaria
+        //(que ocupa 8 veces más)
+        ofstream salida(rutaSalida.c_str(), ios::trunc);
+        if (!salida.is_open()) {
+            cout << ">> ERROR: No se pudo crear el archivo de salida." << endl;
+            return;
+        }
+
+        string vistaPrevia = ""; //solo el inicio, para mostrarlo en consola
+        long totalCaracteres = 0;
         long posicion = 0;
 
         while (posicion < tamanoArchivo) {
@@ -451,7 +468,14 @@ void opcionXORArchivo(GestorArchivos& gestor, SelectorArchivos& selector, Conver
 
             //se pasa "posicion" para que la clave no reinicie su fase en cada bloque
             char* bloqueProcesado = cifradorXor.procesarBloque(buffer, bytesLeidos, posicion);
-            resultadoCompleto += conversor.aTextoBinario(bloqueProcesado, bytesLeidos);
+            string bloqueBinario = conversor.aTextoBinario(bloqueProcesado, bytesLeidos);
+
+            salida << bloqueBinario;
+            totalCaracteres += bloqueBinario.size();
+
+            if (vistaPrevia.size() < 600) {
+                vistaPrevia += bloqueBinario;
+            }
 
             posicion += bytesLeidos;
 
@@ -459,9 +483,17 @@ void opcionXORArchivo(GestorArchivos& gestor, SelectorArchivos& selector, Conver
             delete[] bloqueProcesado;
         }
 
-        mostrarResultadoEnConsola("RESULTADO EN BINARIO", resultadoCompleto);
+        salida.close();
 
-        gestor.guardarTexto(rutaSalida, resultadoCompleto);
+        if (totalCaracteres > 600) {
+            cout << "\n--- RESULTADO EN BINARIO ---" << endl;
+            cout << vistaPrevia << endl;
+            cout << "[...] (se muestran los primeros 600 de " << totalCaracteres << " caracteres)" << endl;
+            cout << "----------------------------------------" << endl;
+        } else {
+            mostrarResultadoEnConsola("RESULTADO EN BINARIO", vistaPrevia);
+        }
+
         cout << ">> Archivo encriptado y convertido a texto binario correctamente." << endl;
         historial.agregarRegistro(usuarioActual, "XOR-Encriptar-Archivo", rutaEntrada);
 
@@ -484,10 +516,12 @@ void opcionXORArchivo(GestorArchivos& gestor, SelectorArchivos& selector, Conver
         string textoRecuperado(bloqueProcesado, longitudBytes);
         mostrarResultadoEnConsola("TEXTO RECUPERADO", textoRecuperado);
 
-        gestor.escribirBloqueBinario(rutaSalida, bloqueProcesado, longitudBytes, true);
-
-        cout << ">> Archivo desencriptado y restaurado correctamente." << endl;
-        historial.agregarRegistro(usuarioActual, "XOR-Desencriptar-Archivo", rutaEntrada);
+        if (gestor.escribirBloqueBinario(rutaSalida, bloqueProcesado, longitudBytes, true)) {
+            cout << ">> Archivo desencriptado y restaurado correctamente." << endl;
+            historial.agregarRegistro(usuarioActual, "XOR-Desencriptar-Archivo", rutaEntrada);
+        } else {
+            cout << ">> ERROR: No se pudo guardar el archivo de salida." << endl;
+        }
 
         delete[] bytesReconstruidos;
         delete[] bloqueProcesado;

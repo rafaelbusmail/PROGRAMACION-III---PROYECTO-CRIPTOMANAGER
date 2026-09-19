@@ -1,0 +1,7 @@
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/CriptoManager.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/edit_cache.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/rebuild_cache.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/list_install_components.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/install.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/install/local.dir
+C:/Users/rafae/OneDrive/Documentos/QT PROJECTS/CriptoManager/build/Release/CMakeFiles/install/strip.dir
