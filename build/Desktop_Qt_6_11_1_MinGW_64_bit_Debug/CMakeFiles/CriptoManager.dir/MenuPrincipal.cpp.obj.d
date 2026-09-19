@@ -1,7 +1,8 @@
-CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.obj: \
- C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\HistorialOperaciones.cpp \
- C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\HistorialOperaciones.h \
- C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\RegistroOperacion.h \
+CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj: \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\MenuPrincipal.cpp \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\MenuPrincipal.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\GestorUsuarios.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Usuario.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -100,6 +101,19 @@ CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
  C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Arreglodinamico.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Hash.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdint.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\CifradorCesar.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\CifradorVigenere.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\CifradorXOR.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\GestorArchivos.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Selectorarchivos.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\ConversorBinario.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\HistorialOperaciones.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\RegistroOperacion.h \
+ C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\MenuAcceso.h \
  C:\Users\rafae\OneDrive\Documentos\QT\ PROJECTS\CriptoManager\Utilidades.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
@@ -150,23 +164,4 @@ CMakeFiles/CriptoManager.dir/HistorialOperaciones.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc

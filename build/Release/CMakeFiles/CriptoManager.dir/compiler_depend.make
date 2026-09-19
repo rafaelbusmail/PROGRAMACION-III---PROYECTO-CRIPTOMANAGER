@@ -1377,7 +1377,7 @@ CMakeFiles/CriptoManager.dir/MenuPrincipal.cpp.obj: C:/Users/rafae/OneDrive/Docu
   C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/Usuario.h \
   C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/Utilidades.h
 
-CMakeFiles/CriptoManager.dir/SelectorArchivos.cpp.obj: C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/Selectorarchivos.cpp \
+CMakeFiles/CriptoManager.dir/Selectorarchivos.cpp.obj: C:/Users/rafae/OneDrive/Documentos/QT\ PROJECTS/CriptoManager/Selectorarchivos.cpp \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \

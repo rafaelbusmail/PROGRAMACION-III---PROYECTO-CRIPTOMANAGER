@@ -3,12 +3,31 @@
 #include "Utilidades.h"
 #include <iostream>
 #include <fstream>
+#include <cctype>
 
 using namespace std;
 
+//compara dos rutas de archivo: en Windows se ignoran mayúsculas/minúsculas
+//(el sistema de archivos no las distingue); en Linux se compara exacto
+static bool mismasRutas(const string& a, const string& b) {
+#ifdef _WIN32
+    if (a.size() != b.size()) {
+        return false;
+    }
+    for (size_t i = 0; i < a.size(); i++) {
+        if (tolower((unsigned char)a[i]) != tolower((unsigned char)b[i])) {
+            return false;
+        }
+    }
+    return true;
+#else
+    return a == b;
+#endif
+}
+
 MenuPrincipal::MenuPrincipal(GestorUsuarios& usuarios)
     : usuarios(usuarios) {
-    //los demás miembros (cifradores, gestor, selector, historial...) se
+    //los demás miembros (cifradores, gestor, selector, etc) se
     //construyen con su constructor por defecto
 }
 
@@ -360,6 +379,14 @@ void MenuPrincipal::opcionXORArchivo() {
 
         if (tamanoArchivo <= 0) {
             cout << ">> ERROR: El archivo está vacío o no se pudo leer." << endl;
+            return;
+        }
+
+        //si entrada y salida son el mismo archivo, abrir la salida con ios::trunc
+        //borraría la entrada antes de leerla y el resultado quedaría vacío
+        if (mismasRutas(rutaEntrada, rutaSalida)) {
+            cout << ">> ERROR: El archivo de entrada y el de salida son el mismo." << endl;
+            cout << "   Elige una ruta de salida diferente para conservar el original." << endl;
             return;
         }
 

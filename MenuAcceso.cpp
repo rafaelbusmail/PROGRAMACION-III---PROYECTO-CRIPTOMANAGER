@@ -35,7 +35,11 @@ bool MenuAcceso::ejecutar(GestorUsuarios& usuarios) {
             //solo un ADMIN puede crear otro ADMIN desde el menú principal
             ResultadoRegistro resultado = usuarios.registrar(nombre, clave, "USUARIO");
             if (resultado == ResultadoRegistro::OK) {
-                cout << ">> Usuario registrado correctamente. Ya puede iniciar sesión." << endl;
+                //el usuario recién registrado entra directo al sistema,
+                //sin tener que volver a elegir "iniciar sesión"
+                usuarios.iniciarSesion(nombre, clave);
+                cout << ">> ¡Bienvenido, " << usuarios.getUsuarioActual()
+                     << "! (rol: " << usuarios.getRolActual() << ")" << endl;
             } else {
                 switch (resultado) {
                 case ResultadoRegistro::NOMBRE_CORTO:
